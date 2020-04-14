@@ -6,7 +6,7 @@ const red = chalk.red;
 const spinner = require('./../utils/spinner');
 const newsBoard = require('./../utils/newsBoard');
 const newsApi = require('./../apis/news');
-const countryValidator = require('./../utils/countryValidator');
+const country = require('./../utils/country');
 
 
 module.exports = {
@@ -17,8 +17,8 @@ module.exports = {
             .option('--name <country-name>', 'Show corona news for <country-name>', prog.STRING, null, true)
             .action(async (args, options, logger) => {
                 spinner.start();
-                const iso = countryValidator.validate(options.name);
-                newsApi.getNewsByCountry(iso)
+                const validated = country.validate(options.name);
+                newsApi.getNewsByCountry(validated.ISO)
                     .then(response => {
                         spinner.stop();
                         logUpdate(logSymbols.success, 'Fetched data successfully!');

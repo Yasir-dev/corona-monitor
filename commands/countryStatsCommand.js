@@ -6,7 +6,7 @@ const red = chalk.red;
 const spinner = require('./../utils/spinner');
 const statsApi = require('./../apis/stats');
 const table = require('./../utils/table');
-const countryValidator = require('./../utils/countryValidator');
+const country = require('./../utils/country');
 
 module.exports = {
 
@@ -17,8 +17,8 @@ module.exports = {
             .action(async (args, options, logger) => {
                 if (options.name) {
                     spinner.start();
-                    const countryISO = countryValidator.validate(options.name);
-                    statsApi.getStatsByCountry(countryISO)
+                    const validated = country.validate(options.name);
+                    statsApi.getStatsByCountry(validated.country)
                         .then(response => {
                             spinner.stop();
                             logUpdate(logSymbols.success, 'Fetched data successfully!');
@@ -38,7 +38,7 @@ module.exports = {
                     .then(response => {
                         spinner.stop();
                         logUpdate(logSymbols.success, 'Fetched data successfully!');
-                        table.drawAllCountriesStats(response.data);
+                        table.drawCountryStats(response.data);
                         process.exit(0);
                     })
                     .catch(error => {

@@ -39,7 +39,6 @@
     "cli-spinners": "^2.3.0",
     "cli-table": "^0.3.1",
     "iso-countries-lookup": "^1.0.14",
-    "lodash.orderby": "^4.6.0",
     "log-symbols": "^3.0.0",
     "log-update": "^4.0.0",
     "moment": "^2.24.0"

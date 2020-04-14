@@ -7,7 +7,7 @@ const countryStatsCommand = require('./commands/countryStatsCommand');
 const countryNewsCommand = require('./commands/countryNewsCommand');
 const countryTimelineCommand = require('./commands/countryTimelineCommand');
 
-let program = prog.version(`${packageJson.version} by ${packageJson.author}`);
+let program = prog.version(`${packageJson.version} by ${packageJson.author.name}`);
 program = globalStatsCommand.init(program);
 program = countryStatsCommand.init(program);
 program = countryNewsCommand.init(program);

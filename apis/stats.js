@@ -1,20 +1,21 @@
 const axios = require('axios');
-const baseUrl = 'https://api.thevirustracker.com/free-api';
+const baseUrl = 'https://corona-virus-stats.herokuapp.com/api/v1/cases/countries-search';
 
 module.exports = {
 
     getGlobalStats: () => {
         return axios.get(baseUrl, {
             params: {
-                global: 'stats',
+                limit: 1,
             }
         });
     },
 
-    getStatsByCountry: async (countryISO) => {
+    getStatsByCountry: async (country) => {
         return axios.get(baseUrl, {
             params: {
-                countryTotal: countryISO,
+                search: country,
+                limit: 1,
             }
         });
     },
@@ -22,7 +23,9 @@ module.exports = {
     getAllCountriesStats: async () => {
         return axios.get(baseUrl, {
             params: {
-                countryTotals: 'all',
+                limit: 300,
+                order: 'total_cases',
+                how: 'desc',
             }
         });
     }

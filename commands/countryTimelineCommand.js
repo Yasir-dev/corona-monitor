@@ -5,7 +5,7 @@ const chalk = require('chalk');
 const red = chalk.red;
 const spinner = require('./../utils/spinner');
 const timelineApi = require('./../apis/timeline');
-const countryValidator = require('./../utils/countryValidator');
+const country = require('./../utils/country');
 const chart = require('./../utils/chart');
 
 module.exports = {
@@ -16,8 +16,8 @@ module.exports = {
             .option('--name <country-name>', 'Show corona timeline chart for <country-name>', prog.STRING, null, true)
             .action(async (args, options, logger) => {
                 spinner.start();
-                const iso = countryValidator.validate(options.name);
-                timelineApi.getTimelineByCountry(iso)
+                const validate = country.validate(options.name);
+                timelineApi.getTimelineByCountry(validate.ISO)
                     .then(response => {
                         spinner.stop();
                         logUpdate(logSymbols.success, 'Fetched data successfully!');
