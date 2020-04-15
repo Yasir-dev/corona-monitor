@@ -46,7 +46,7 @@ corona-monitor global:stats
 corona-monitor country:stats
 ```
 
-![stats-country-all](./github/state-country-all.gif)
+![stats-country-all](./.github/state-country-all.gif)
 
 
 ### Single country stats
