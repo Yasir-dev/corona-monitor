@@ -2,6 +2,12 @@
   "name": "corona-monitor",
   "version": "1.0.0",
   "description": "A node cli application to track latest conora (COVID-19) statistics and news",
+  "license": "MIT",
+  "author": {
+    "name": "Yasir Khurshid",
+    "email": "yasir.khurshid@gmail.com"
+  },
+  "repository": "Yasir-dev/corona-monitor",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,16 +26,14 @@
     "corona-numbers",
     "corona-country-history"
   ],
+  "engines": {
+    "node": ">=12.x"
+  },
   "bin": {
     "corona-monitor": "index.js",
     "corona-cli": "index.js",
     "corona": "index.js"
   },
-  "author": {
-    "name": "Yasir Khurshid",
-    "email": "yasir.khurshid@gmail.com"
-  },
-  "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2",
     "blessed": "^0.1.81",

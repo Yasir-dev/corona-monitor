@@ -6,7 +6,7 @@ module.exports = {
     getTimelineByCountry: (countryISO) => {
         return axios.get(`${baseUrl}/${countryISO}`, {
             headers: {
-                'Subscription-Key': '3009d4ccc29e4808af1ccc25c69b4d5d',
+                'Subscription-Key': '289571b2c6124847bf424982efe43d29',
             }
         });
     }
