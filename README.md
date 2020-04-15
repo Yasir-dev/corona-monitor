@@ -22,14 +22,14 @@ npm install -g corona-monitor
 corona-monitor --help
 ```
 
-![help](./.github/help.gif)
+![help](./.github/help.png)
 
 ### Getting help for a command
 
 ```
 corona-monitor country:stats --help
 ```
-![command-help](./.github/command-help.gif)
+![command-help](./.github/command-help.png)
 
 
 ### Global stats
@@ -38,7 +38,7 @@ corona-monitor country:stats --help
 corona-monitor global:stats
 ```
 
-![stats-global](./.github/stats-global.gif)
+![stats-global](./.github/stats-global.png)
 
 ### All countries stats
 
@@ -46,7 +46,7 @@ corona-monitor global:stats
 corona-monitor country:stats
 ```
 
-![stats-country-all](./.github/state-country-all.gif)
+![stats-country-all](./.github/stats-country-all.png)
 
 
 ### Single country stats
@@ -55,7 +55,7 @@ corona-monitor country:stats
 corona-monitor country:stats --name germany
 ```
 
-![stats-country-single](./.github/stats-country-single.gif)
+![stats-country-single](./.github/stats-country-single.png)
 
 
 ### News for a country
@@ -64,7 +64,7 @@ corona-monitor country:stats --name germany
 corona-monitor country:news --name germany
 ```
 
-![news-country](./.github/news-country.gif)
+![news-country](./.github/news-country.png)
 
 ### Timeline chart for a country
 
@@ -73,7 +73,7 @@ corona-monitor country:news --name germany
 corona-monitor country:timeline --name germany
 ```
 
-![timeline-country](./.github/timeline-country.gif)
+![timeline-country](./.github/timeline-country.png)
 
 ## License
 
