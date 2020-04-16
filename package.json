@@ -1,6 +1,6 @@
 {
   "name": "corona-monitor",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A node cli application to track latest conora (COVID-19) statistics and news",
   "license": "MIT",
   "author": {
@@ -34,6 +34,12 @@
     "corona-cli": "index.js",
     "corona": "index.js"
   },
+  "files": [
+    "index.js",
+    "apis/*",
+    "commands/*",
+    "utils/*"
+  ],
   "dependencies": {
     "axios": "^0.19.2",
     "blessed": "^0.1.81",
